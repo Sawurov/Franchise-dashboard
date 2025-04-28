@@ -1,7 +1,7 @@
 {
   "appIsExample": false,
   "appLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "applicationDetail": {
     "navigationSetting": {
@@ -29,10 +29,22 @@
     {
       "id": "Dashboard",
       "isDefault": true
+    },
+    {
+      "id": "Bonuses",
+      "isDefault": false
+    },
+    {
+      "id": "Clients",
+      "isDefault": false
+    },
+    {
+      "id": "Admin Only",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "unpublishedApplicationDetail": {
     "navigationSetting": {

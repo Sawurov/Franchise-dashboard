@@ -1,8 +1,8 @@
 {
-  "gitSyncId": "67f68086e25bd35219fc3108_f7e9db61-caca-4072-b4de-d7a70c40ea77",
-  "id": "Dashboard_utils",
+  "gitSyncId": "67f68086e25bd35219fc3108_ffe47a1c-52a2-4909-b391-ece72a5ebe8d",
+  "id": "Dashboard_analytics",
   "unpublishedCollection": {
-    "name": "utils",
+    "name": "analytics",
     "pageId": "Dashboard",
     "pluginId": "js-plugin",
     "pluginType": "JS",

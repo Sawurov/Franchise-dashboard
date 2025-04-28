@@ -1,0 +1,72 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowScroll": false,
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 39,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "chartData": {
+    "vhc4xta1zd": {
+      "color": "#3b82f6",
+      "data": "{{ analytics.chartData() }}",
+      "seriesName": ""
+    }
+  },
+  "chartName": "{{ utils.isAdmin(appsmith.user.email) \n     ? \"Бонусы по партнёрам\" \n     : \"Бонусы по месяцам\" }}",
+  "chartType": "CUSTOM_ECHART",
+  "customEChartConfig": "{{ ((chartType) => ( \nutils.isAdmin(appsmith.user.email)\n/* ---------- ADMIN ---------- */\n? {\n    tooltip : { trigger: 'axis' },\n    /* Горизонтальная шкала = значение, вертикальная = имена партнёров */\n    xAxis   : { type: 'value',\n                axisLabel: { formatter: v => Number(v).toLocaleString() + \" so'm\" } },\n    yAxis   : { type: 'category',\n                data: analytics.chartData().map(d => d.x) },\n    series  : [{\n      name : 'Bonuses',\n      type : 'bar',\n      data : analytics.chartData().map(d => d.y),\n      itemStyle : { color: '#3B82F6' }\n    }]\n  }\n\n/* ---------- ПАРТНЁР ---------- */\n: {\n    tooltip : { trigger: 'axis' },\n    xAxis   : { type: 'category',\n                data: analytics.chartData().map(d => d.x) },\n    yAxis   : { type: 'value',\n                axisLabel: { formatter: v => Number(v).toLocaleString() + \" so'm\" } },\n    series  : [{\n      name : 'Bonuses',\n      type : 'bar',               // \"bar\" = вертикальные колонки\n      data : analytics.chartData().map(d => d.y),\n      itemStyle : { color: '#3B82F6' }\n    }]\n  }\n))(Chart1.chartType) }}",
+  "customFusionChartConfig": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "chartData.vhc4xta1zd.data"
+    },
+    {
+      "key": "chartName"
+    },
+    {
+      "key": "customEChartConfig"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kxf9um8z3b",
+  "labelOrientation": "auto",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 41,
+  "mobileLeftColumn": 11,
+  "mobileRightColumn": 35,
+  "mobileTopRow": 9,
+  "needsErrorInfo": true,
+  "parentColumnSpace": 8.148193359375,
+  "parentId": "8112487vr6",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 63,
+  "setAdaptiveYMin": true,
+  "showDataPointLabel": true,
+  "topRow": 7,
+  "type": "CHART_WIDGET",
+  "version": 1,
+  "widgetId": "jx8goc93d0",
+  "widgetName": "Chart1",
+  "xAxisName": "",
+  "yAxisName": ""
+}

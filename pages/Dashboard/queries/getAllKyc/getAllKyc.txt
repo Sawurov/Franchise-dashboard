@@ -1,1 +1,0 @@
-SELECT * FROM kyc ORDER BY id ASC;

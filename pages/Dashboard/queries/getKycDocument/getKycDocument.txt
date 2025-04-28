@@ -1,1 +1,0 @@
-SELECT * FROM kyc_document WHERE "user" = {{tbl_kycList.selectedRow.Id || '1'}};
