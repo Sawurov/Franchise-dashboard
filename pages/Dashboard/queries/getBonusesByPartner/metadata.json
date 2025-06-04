@@ -76,9 +76,9 @@
         "key": "formData.where.data"
       }
     ],
-    "executeOnLoad": true,
     "name": "getBonusesByPartner",
     "pageId": "Dashboard",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }

@@ -78,9 +78,9 @@
         "key": "formData.where.data"
       }
     ],
-    "executeOnLoad": true,
     "name": "getClients",
     "pageId": "Dashboard",
+    "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": false
   }
 }
